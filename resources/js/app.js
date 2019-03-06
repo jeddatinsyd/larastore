@@ -5,6 +5,13 @@ Vue.use(Vuetify)
 import * as VueGoogleMaps from 'vue2-google-maps';
 window.Bus=new Vue;
 
+Vue.use(GoogleMaps,{
+    load:{
+               key: 'AIzaSyCa7qfi1d-fyqLHZNI5EfdCFtxN3T5I_j0';
+               libraries:'places',
+    }
+});
+
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('shop-layout' , require('./components/ShopLayout.vue'));
 Vue.component('shop-map', require('./components/ShopMap.vue'));
